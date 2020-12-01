@@ -37,3 +37,18 @@ def Database():
         tree.insert('', 'end', values=(data))
     cursor.close()
     conn.close()
+
+
+def SubmitData():
+    if FIRSTNAME.get() == "" or LASTNAME.get() == "" or GENDER.get() == "" or AGE.get() == "" or ADDRESS.get() == "" or CONTACT.get() == "":
+        result = tkMessageBox.showwarning(
+            '', 'Please Complete The Required Field', icon="warning")
+    else:
+        tree.delete(*tree.get_children())
+        conn = sqlite3.connect("cms.db")
+        cursor = conn.cursor()
+        cursor.execute("INSERT INTO `member` (firstname, lastname, gender, age, address, contact) VALUES(?, ?, ?, ?, ?, ?)", (str(
+            FIRSTNAME.get()), str(LASTNAME.get()), str(GENDER.get()), int(AGE.get()), str(ADDRESS.get()), str(CONTACT.get())))
+        conn.commit()
+        cursor.execute("SELECT * FROM `member` ORDER BY `lastname` ASC")
+        fetch = cursor.fetchall()
