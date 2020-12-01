@@ -52,3 +52,14 @@ def SubmitData():
         conn.commit()
         cursor.execute("SELECT * FROM `member` ORDER BY `lastname` ASC")
         fetch = cursor.fetchall()
+
+        for data in fetch:
+            tree.insert('', 'end', values=(data))
+        cursor.close()
+        conn.close()
+        FIRSTNAME.set("")
+        LASTNAME.set("")
+        GENDER.set("")
+        AGE.set("")
+        ADDRESS.set("")
+        CONTACT.set("")
