@@ -63,3 +63,9 @@ def SubmitData():
         AGE.set("")
         ADDRESS.set("")
         CONTACT.set("")
+
+
+def UpdateData():
+    if GENDER.get() == "":
+        result = tkMessageBox.showwarning(
+            '', 'Please Complete The Required Field', icon="warning")
