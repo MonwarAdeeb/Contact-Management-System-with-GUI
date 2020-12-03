@@ -97,3 +97,14 @@ def OnSelected(event):
     contents = (tree.item(curItem))
     selecteditem = contents['values']
     mem_id = selecteditem[0]
+    FIRSTNAME.set("")
+    LASTNAME.set("")
+    GENDER.set("")
+    AGE.set("")
+    ADDRESS.set("")
+    CONTACT.set("")
+    FIRSTNAME.set(selecteditem[1])
+    LASTNAME.set(selecteditem[2])
+    AGE.set(selecteditem[4])
+    ADDRESS.set(selecteditem[5])
+    CONTACT.set(selecteditem[6])
