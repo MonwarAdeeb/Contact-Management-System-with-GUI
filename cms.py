@@ -89,3 +89,11 @@ def UpdateData():
         AGE.set("")
         ADDRESS.set("")
         CONTACT.set("")
+
+
+def OnSelected(event):
+    global mem_id, UpdateWindow
+    curItem = tree.focus()
+    contents = (tree.item(curItem))
+    selecteditem = contents['values']
+    mem_id = selecteditem[0]
