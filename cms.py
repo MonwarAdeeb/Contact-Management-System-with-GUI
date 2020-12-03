@@ -108,3 +108,15 @@ def OnSelected(event):
     AGE.set(selecteditem[4])
     ADDRESS.set(selecteditem[5])
     CONTACT.set(selecteditem[6])
+    UpdateWindow = Toplevel()
+    UpdateWindow.title("Contact List")
+    width = 400
+    height = 300
+    screen_width = root.winfo_screenwidth()
+    screen_height = root.winfo_screenheight()
+    x = ((screen_width/2) + 450) - (width/2)
+    y = ((screen_height/2) + 20) - (height/2)
+    UpdateWindow.resizable(0, 0)
+    UpdateWindow.geometry("%dx%d+%d+%d" % (width, height, x, y))
+    if 'NewWindow' in globals():
+        NewWindow.destroy()
