@@ -120,3 +120,14 @@ def OnSelected(event):
     UpdateWindow.geometry("%dx%d+%d+%d" % (width, height, x, y))
     if 'NewWindow' in globals():
         NewWindow.destroy()
+
+    # ===================FRAMES==============================
+    FormTitle = Frame(UpdateWindow)
+    FormTitle.pack(side=TOP)
+    ContactForm = Frame(UpdateWindow)
+    ContactForm.pack(side=TOP, pady=10)
+    RadioGroup = Frame(ContactForm)
+    Male = Radiobutton(RadioGroup, text="Male", variable=GENDER,
+                       value="Male",  font=('arial', 14)).pack(side=LEFT)
+    Female = Radiobutton(RadioGroup, text="Female", variable=GENDER,
+                         value="Female",  font=('arial', 14)).pack(side=LEFT)
