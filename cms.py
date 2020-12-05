@@ -131,3 +131,22 @@ def OnSelected(event):
                        value="Male",  font=('arial', 14)).pack(side=LEFT)
     Female = Radiobutton(RadioGroup, text="Female", variable=GENDER,
                          value="Female",  font=('arial', 14)).pack(side=LEFT)
+
+# ===================LABELS==============================
+    lbl_title = Label(FormTitle, text="Updating Contacts",
+                      font=('arial', 16), bg="orange",  width=300)
+    lbl_title.pack(fill=X)
+    lbl_firstname = Label(ContactForm, text="Firstname",
+                          font=('arial', 14), bd=5)
+    lbl_firstname.grid(row=0, sticky=W)
+    lbl_lastname = Label(ContactForm, text="Lastname",
+                         font=('arial', 14), bd=5)
+    lbl_lastname.grid(row=1, sticky=W)
+    lbl_gender = Label(ContactForm, text="Gender", font=('arial', 14), bd=5)
+    lbl_gender.grid(row=2, sticky=W)
+    lbl_age = Label(ContactForm, text="Age", font=('arial', 14), bd=5)
+    lbl_age.grid(row=3, sticky=W)
+    lbl_address = Label(ContactForm, text="Address", font=('arial', 14), bd=5)
+    lbl_address.grid(row=4, sticky=W)
+    lbl_contact = Label(ContactForm, text="Contact", font=('arial', 14), bd=5)
+    lbl_contact.grid(row=5, sticky=W)
