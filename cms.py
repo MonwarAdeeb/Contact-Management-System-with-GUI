@@ -163,3 +163,8 @@ def OnSelected(event):
     address.grid(row=4, column=1)
     contact = Entry(ContactForm, textvariable=CONTACT,  font=('arial', 14))
     contact.grid(row=5, column=1)
+
+    # ==================BUTTONS==============================
+    btn_updatecon = Button(ContactForm, text="Update",
+                           width=50, command=UpdateData)
+    btn_updatecon.grid(row=6, columnspan=2, pady=10)
