@@ -168,3 +168,25 @@ def OnSelected(event):
     btn_updatecon = Button(ContactForm, text="Update",
                            width=50, command=UpdateData)
     btn_updatecon.grid(row=6, columnspan=2, pady=10)
+
+
+# fn1353p
+def DeleteData():
+    if not tree.selection():
+        result = tkMessageBox.showwarning(
+            '', 'Please Select Something First!', icon="warning")
+    else:
+        result = tkMessageBox.askquestion(
+            '', 'Are you sure you want to delete this record?', icon="warning")
+        if result == 'yes':
+            curItem = tree.focus()
+            contents = (tree.item(curItem))
+            selecteditem = contents['values']
+            tree.delete(curItem)
+            conn = sqlite3.connect("database.db")
+            cursor = conn.cursor()
+            cursor.execute(
+                "DELETE FROM `member` WHERE `mem_id` = %d" % selecteditem[0])
+            conn.commit()
+            cursor.close()
+            conn.close()   
