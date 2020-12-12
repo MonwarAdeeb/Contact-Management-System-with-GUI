@@ -242,3 +242,16 @@ def AddNewWindow():
     lbl_address.grid(row=4, sticky=W)
     lbl_contact = Label(ContactForm, text="Contact", font=('arial', 14), bd=5)
     lbl_contact.grid(row=5, sticky=W)
+
+    # ===================ENTRY===============================
+    firstname = Entry(ContactForm, textvariable=FIRSTNAME, font=('arial', 14))
+    firstname.grid(row=0, column=1)
+    lastname = Entry(ContactForm, textvariable=LASTNAME, font=('arial', 14))
+    lastname.grid(row=1, column=1)
+    RadioGroup.grid(row=2, column=1)
+    age = Entry(ContactForm, textvariable=AGE,  font=('arial', 14))
+    age.grid(row=3, column=1)
+    address = Entry(ContactForm, textvariable=ADDRESS,  font=('arial', 14))
+    address.grid(row=4, column=1)
+    contact = Entry(ContactForm, textvariable=CONTACT,  font=('arial', 14))
+    contact.grid(row=5, column=1)
