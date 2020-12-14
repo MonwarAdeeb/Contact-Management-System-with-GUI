@@ -274,3 +274,9 @@ MidRight = Frame(Mid, width=100)
 MidRight.pack(side=RIGHT, pady=10)
 TableMargin = Frame(root, width=500)
 TableMargin.pack(side=TOP)
+
+
+# ============================LABELS======================================
+lbl_title = Label(Top, text="Contact Management System",
+                  font=('arial', 16), width=500)
+lbl_title.pack(fill=X)
