@@ -280,3 +280,11 @@ TableMargin.pack(side=TOP)
 lbl_title = Label(Top, text="Contact Management System",
                   font=('arial', 16), width=500)
 lbl_title.pack(fill=X)
+
+# ============================ENTRY=======================================
+
+# ============================BUTTONS=====================================
+btn_add = Button(MidLeft, text="+ ADD NEW", bg="#66ff66", command=AddNewWindow)
+btn_add.pack()
+btn_delete = Button(MidRight, text="DELETE", bg="red", command=DeleteData)
+btn_delete.pack(side=RIGHT)
